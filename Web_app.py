@@ -6,7 +6,8 @@ import pandas as pd
 
 
 # loading the saved model
-loaded_model=pickle.load(open('trained_model.sav','rb'))
+current_dir = os.path.dirname(__file__)
+model_path = os.path.join(current_dir, 'trained_model.sav')
 
 # creating a function for Prediction
 
@@ -92,4 +93,5 @@ def main():
     
 if __name__ == '__main__':
     main()
+
     

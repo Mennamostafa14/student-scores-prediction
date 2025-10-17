@@ -15,6 +15,13 @@ model_path = current_dir / "trained_model.sav"
 with open(model_path, "rb") as file:
     loaded_model = pickle.load(file)
 
+st.set_page_config(
+    page_title="🎓 Student Score Predictor",
+    page_icon="🎯",
+    layout="centered",
+    initial_sidebar_state="expanded"
+)
+
 # creating a function for Prediction
 
 def predict_exam_score(input_data):
@@ -30,12 +37,7 @@ def main():
     
     
     # giving a title
-    st.set_page_config(
-    page_title="🎓 Student Score Predictor",
-    page_icon="🎯",
-    layout="centered",
-    initial_sidebar_state="expanded"
-)
+     st.title('Student Score Prediction Web App')
     
     
     # getting the input data from the user
@@ -103,6 +105,7 @@ if __name__ == '__main__':
     main()
 
     
+
 
 
 

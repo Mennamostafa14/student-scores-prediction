@@ -5,7 +5,7 @@ This is a **Machine Learning web application** built using **Streamlit** that pr
 ---
 
 ## 🚀 Live Demo
-👉 [Click here to open the app]([https://student-scores-prediction-fawcbgjnwupbaxvdeoncx4.streamlit.app/])  
+👉 [Click here to open the app](https://student-scores-prediction-fawcbgjnwupbaxvdeoncx4.streamlit.app/)  
 
 
 ---
@@ -63,15 +63,15 @@ Model Training
 
 The model was trained using Linear Regression and a full preprocessing pipeline including:
 
-PolynomialFeatures
-MinMaxScaler
-OneHotEncoder
-OrdinalEncoder
+- PolynomialFeatures
+- MinMaxScaler
+- OneHotEncoder
+- OrdinalEncoder
 ----
 Author:
-Menna Mostafa
-📍 Data Scientist | Machine Learning Engineer
-🔗 www.linkedin.com/in/menna--mostafa
+- Menna Mostafa
+- 📍Data Scientist | Machine Learning Engineer
+- 🔗 www.linkedin.com/in/menna--mostafa
 ---
 
 💬 Feedback

@@ -86,10 +86,7 @@ def main():
     # creating a button for Prediction
     
     if st.button('Predict Exam Score'):
-        """input_data=[Hours_Studied,Attendance,Parental_Involvement,Access_to_Resources,Extracurricular_Activities,
-                    Sleep_Hours,Previous_Scores,Motivation_Level,Internet_Access,
-                    Tutoring_Sessions,Family_Income,Teacher_Quality,School_Type,Peer_Influence,
-                    Physical_Activity,Learning_Disabilities,Parental_Education_Level,Distance_from_Home,Gender]"""
+        
         result=predict_exam_score(input_data)
         st.success(result)
     
@@ -101,6 +98,7 @@ if __name__ == '__main__':
     main()
 
     
+
 
 
 

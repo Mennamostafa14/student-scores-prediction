@@ -9,6 +9,9 @@ import pandas as pd
 current_dir = os.path.dirname(__file__)
 model_path = os.path.join(current_dir, 'trained_model.sav')
 
+with open(model_path, 'rb') as file:
+    model = pickle.load(file)
+
 # creating a function for Prediction
 
 def predict_exam_score(input_data):
@@ -95,3 +98,4 @@ if __name__ == '__main__':
     main()
 
     
+

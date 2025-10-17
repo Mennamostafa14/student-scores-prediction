@@ -77,6 +77,3 @@ Author:
 💬 Feedback
 
 If you have any suggestions or issues, feel free to open an issue or contact me
-2ز
-2ز 
-2ز

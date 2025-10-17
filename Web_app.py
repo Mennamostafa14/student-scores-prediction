@@ -37,7 +37,7 @@ def main():
     
     
     # giving a title
-     st.title('Student Score Prediction Web App')
+     
     
     
     # getting the input data from the user
@@ -105,6 +105,7 @@ if __name__ == '__main__':
     main()
 
     
+
 
 
 

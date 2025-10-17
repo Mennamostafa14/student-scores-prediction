@@ -5,9 +5,13 @@ import streamlit as st
 import pandas as pd
 import pathlib
 
+st.set_page_config(
+    page_title="🎓 Student Score Predictor",
+    page_icon="🎯",
+    layout="centered",
+    initial_sidebar_state="expanded"
+)
 # loading the saved model
-
-
 # استخدمي Path بدل __file__
 current_dir = pathlib.Path(__file__).parent if "__file__" in locals() else pathlib.Path.cwd()
 model_path = current_dir / "trained_model.sav"
@@ -15,12 +19,43 @@ model_path = current_dir / "trained_model.sav"
 with open(model_path, "rb") as file:
     loaded_model = pickle.load(file)
 
-st.set_page_config(
-    page_title="🎓 Student Score Predictor",
-    page_icon="🎯",
-    layout="centered",
-    initial_sidebar_state="expanded"
-)
+# ✅ CSS لتجميل الواجهة
+st.markdown("""
+    <style>
+    [data-testid="stAppViewContainer"] {
+        background: linear-gradient(135deg, #e0f7fa 0%, #fffde7 100%);
+    }
+
+    .main-card {
+        background-color: #ffffffcc;
+        padding: 2rem;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    div.stButton > button:first-child {
+        background: linear-gradient(to right, #42a5f5, #478ed1);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 0.6rem 1.3rem;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+    div.stButton > button:hover {
+        background: linear-gradient(to right, #1e88e5, #1565c0);
+        transform: scale(1.03);
+    }
+
+    h1, h2, h3 {
+        text-align: center;
+        color: #0d47a1;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    </style>
+""", unsafe_allow_html=True)
 
 # creating a function for Prediction
 
@@ -36,12 +71,11 @@ def predict_exam_score(input_data):
 def main():
     
     
-    # giving a title
-     
-    
-    
-    # getting the input data from the user
-    st.header("Enter student information:")
+    st.markdown('<div class="main-card">', unsafe_allow_html=True)
+    st.title('🎓 Student Score Prediction App')
+    st.write("Enter student details below and get the predicted exam score instantly!")
+
+    st.header("📋 Student Information")
     
     Hours_Studied = st.number_input("Hours Studied", min_value=0, step=1)
     Attendance = st.number_input("Attendance (%)", min_value=0, max_value=100, step=1)
@@ -105,6 +139,7 @@ if __name__ == '__main__':
     main()
 
     
+
 
 
 

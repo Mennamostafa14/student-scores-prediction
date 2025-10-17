@@ -30,7 +30,12 @@ def main():
     
     
     # giving a title
-    st.title('Student Score Prediction Web App')
+    st.set_page_config(
+    page_title="🎓 Student Score Predictor",
+    page_icon="🎯",
+    layout="centered",
+    initial_sidebar_state="expanded"
+)
     
     
     # getting the input data from the user
@@ -98,6 +103,7 @@ if __name__ == '__main__':
     main()
 
     
+
 
 
 

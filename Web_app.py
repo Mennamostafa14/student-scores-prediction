@@ -3,13 +3,16 @@ import numpy as np
 import pickle
 import streamlit as st
 import pandas as pd
-
+import pathlib
 
 # loading the saved model
-current_dir = os.path.dirname(__file__)
-model_path = os.path.join(current_dir, 'trained_model.sav')
 
-with open(model_path, 'rb') as file:
+
+# استخدمي Path بدل __file__
+current_dir = pathlib.Path(__file__).parent if "__file__" in locals() else pathlib.Path.cwd()
+model_path = current_dir / "trained_model.sav"
+
+with open(model_path, "rb") as file:
     loaded_model = pickle.load(file)
 
 # creating a function for Prediction
@@ -98,5 +101,6 @@ if __name__ == '__main__':
     main()
 
     
+
 
 

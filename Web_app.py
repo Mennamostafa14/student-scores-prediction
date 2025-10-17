@@ -19,30 +19,33 @@ model_path = current_dir / "trained_model.sav"
 with open(model_path, "rb") as file:
     loaded_model = pickle.load(file)
 
-# ✅ CSS لتجميل الواجهة
+# ✅ CSS للتصميم
 st.markdown("""
     <style>
     [data-testid="stAppViewContainer"] {
-        background: linear-gradient(135deg, #e0f7fa 0%, #fffde7 100%);
+        background: linear-gradient(135deg, #f0f8ff 0%, #e8f5e9 100%);
+        color: #1a237e !important;
     }
 
     .main-card {
-        background-color: #ffffffcc;
+        background-color: #ffffff;
         padding: 2rem;
         border-radius: 20px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        color: #0d47a1;
     }
 
     div.stButton > button:first-child {
-        background: linear-gradient(to right, #42a5f5, #478ed1);
-        color: white;
+        background: linear-gradient(to right, #2196f3, #42a5f5);
+        color: white !important;
         border: none;
-        border-radius: 8px;
-        padding: 0.6rem 1.3rem;
-        font-size: 1rem;
+        border-radius: 10px;
+        padding: 0.7rem 1.5rem;
+        font-size: 1.1rem;
         font-weight: bold;
         transition: all 0.3s ease;
     }
+
     div.stButton > button:hover {
         background: linear-gradient(to right, #1e88e5, #1565c0);
         transform: scale(1.03);
@@ -54,9 +57,13 @@ st.markdown("""
         font-family: 'Segoe UI', sans-serif;
     }
 
+    label, .stMarkdown, .stSelectbox label, .stNumberInput label {
+        color: #0d47a1 !important;
+        font-weight: 500;
+    }
+
     </style>
 """, unsafe_allow_html=True)
-
 # creating a function for Prediction
 
 def predict_exam_score(input_data):
@@ -139,6 +146,7 @@ if __name__ == '__main__':
     main()
 
     
+
 
 
 
